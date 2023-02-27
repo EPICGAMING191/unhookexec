@@ -1,0 +1,15 @@
+[Version]
+Signature="$Chicago$"
+Provider=Symantec
+
+[DefaultInstall]
+AddReg=UnhookRegKey
+
+[UngookRegKey]
+HKLM, Software\CLASSES\batfile\shell\open\command,,,"""%1"" %+"
+HKLM, Software\CLASSES\comfile\shell\open\command,,,"""%1"" %+"
+HKLM, Software\CLASSES\exefile\shell\open\command,,,"""%1"" %+"
+HKLM, Software\CLASSES\piffile\shell\open\command,,,"""%1"" %+"
+HKLM, Software\CLASSES\regfile\shell\open\command,,,"regedit.exe ""%1"""
+HKLM, Software\CLASSES\scrfile\shell\open\command,,,"""%1"" %+"
+HKLM, Software\Microsoft\Windows\CurrentVersion\Policies\System,DisableRegistryTools,0x00000020,0
